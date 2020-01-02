@@ -1,0 +1,79 @@
+---
+title: "Week 6"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+library(ggplot2)
+```
+
+```{r}
+data=read.csv('pc-price.csv',header=T)
+```
+
+
+```{r}
+data[1:10,] 
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r}
+ggplot(data,aes(factor(ram),fill=factor(screen)) ) +
+  geom_bar(position = 'dodge2')+
+  facet_wrap(~premium,ncol = 1)+
+  ylab('Counts') +
+  xlab('Ram(GB)')+
+  ggtitle('Rams sold based on the screen size and further broken down into Premium.')+
+  labs(fill='Screen size(inches)')
+```
+```{r}
+data2=read.csv("dataset_production_of_rice_in_indonesia.xls",header = TRUE)
+```
+```{r}
+data2[1:10,]
+```
+
+```{r}
+ggplot(data2,aes(x=wage,fill=status)) +
+  geom_histogram(binwidth = 5) +
+  facet_wrap(~varieties) +
+  ylab('Frequency') +
+  xlab('Wages')+
+  ggtitle('Wages distribution based on status of land and varieties of Rice produced.')
+```
+
+```{r}
+data3<-read.csv('dataset_tipping_data(1).csv')
+```
+
+```{r}
+data3[1:10,]
+```
+
+```{r}
+ggplot(data3,aes(x=day,y=tip,fill=time)) +
+  geom_boxplot()+
+  facet_wrap(~sex,ncol = 1)+
+  xlab('Day of the week')+
+  ylab('Tips')+
+  ggtitle('Tips given by the customers based on the days, gender and meal time.')
+```
+```{r}
+data4=read.csv("dataset_edgar_anderson_iris_data.xls",header = T)
+```
+```{r}
+data4[1:10,]
+```
+
+```{r}
+ggplot(data4,aes(x=Petal.Length,y=Petal.Width,col=Species,shape=Species))+
+  geom_point()+
+  facet_wrap(~Species, ncol = 1)+
+  xlab('Petal lenght')+
+  ylab('Petal width')+
+  ggtitle('Petal length vs Petal width broken down based on the species of the flower.')
+```
+
