@@ -1,6 +1,8 @@
 ---
-title: "Week 6"
-output: html_document
+title: "Advance graphing II"
+output: 
+  html_document:
+    keep_md: true
 ---
 
 ```{r setup, include=FALSE}

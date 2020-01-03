@@ -1,5 +1,5 @@
 ---
-title: "Week 6"
+title: "Advance graphing II"
 output: 
   html_document:
     keep_md: true
@@ -48,7 +48,7 @@ ggplot(data,aes(factor(ram),fill=factor(screen)) ) +
   labs(fill='Screen size(inches)')
 ```
 
-![](week6_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](Advance_graphing_II_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
 
 ```r
 data2=read.csv("dataset_production_of_rice_in_indonesia.xls",header = TRUE)
@@ -104,7 +104,7 @@ ggplot(data2,aes(x=wage,fill=status)) +
   ggtitle('Wages distribution based on status of land and varieties of Rice produced.')
 ```
 
-![](week6_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](Advance_graphing_II_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 
 
 ```r
@@ -140,7 +140,7 @@ ggplot(data3,aes(x=day,y=tip,fill=time)) +
   ggtitle('Tips given by the customers based on the days, gender and meal time.')
 ```
 
-![](week6_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+![](Advance_graphing_II_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
 
 ```r
 data4=read.csv("dataset_edgar_anderson_iris_data.xls",header = T)
@@ -174,5 +174,5 @@ ggplot(data4,aes(x=Petal.Length,y=Petal.Width,col=Species,shape=Species))+
   ggtitle('Petal length vs Petal width broken down based on the species of the flower.')
 ```
 
-![](week6_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
+![](Advance_graphing_II_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
 
